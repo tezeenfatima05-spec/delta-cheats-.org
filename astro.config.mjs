@@ -52,6 +52,7 @@ export default defineConfig({
     },
   },
   build: {
-    inlineStylesheets: 'always',
+    /** External CSS keeps HTML under audit size limits (~217KB was inlined per page). */
+    inlineStylesheets: 'never',
   },
 });
