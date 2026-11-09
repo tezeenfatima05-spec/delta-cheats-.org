@@ -23,6 +23,8 @@ interface Props {
   id?: string;
   class?: string;
   titleAs?: 'h1' | 'h2';
+  /** Wrap each question trigger in h3 for outline order on /faq/ */
+  questionHeadings?: boolean;
 }
 
 const {
@@ -38,6 +40,7 @@ const {
   id: sectionId,
   class: className,
   titleAs = 'h1',
+  questionHeadings = false,
 } = Astro.props;
 
 const topicLabels: Record<FaqTopic, string> = {
@@ -100,12 +103,25 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
       {items.map((faq, i) => (
         <div data-faq-topic={faq.topic}>
           <AccordionItem value={`faq-${i}`}>
-            <AccordionTrigger class="text-left">
-              <span class="flex items-center gap-2">
-                <Icon name={faq.icon} size={16} class="shrink-0" />
-                <span>{faq.q}</span>
-              </span>
-            </AccordionTrigger>
+            {
+              questionHeadings ? (
+                <h3 class="m-0 text-inherit font-inherit">
+                  <AccordionTrigger class="text-left w-full">
+                    <span class="flex items-center gap-2">
+                      <Icon name={faq.icon} size={16} class="shrink-0" />
+                      <span>{faq.q}</span>
+                    </span>
+                  </AccordionTrigger>
+                </h3>
+              ) : (
+                <AccordionTrigger class="text-left">
+                  <span class="flex items-center gap-2">
+                    <Icon name={faq.icon} size={16} class="shrink-0" />
+                    <span>{faq.q}</span>
+                  </span>
+                </AccordionTrigger>
+              )
+            }
             <AccordionContent>
               <div class="prose prose-sm dark:prose-invert max-w-none text-muted-foreground" set:html={faq.aHtml ?? faq.a} />
             </AccordionContent>

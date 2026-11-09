@@ -6,6 +6,7 @@ import { breadcrumbSchema, faqPageSchema, webPageSchema } from '../utils/schema'
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SiteFaqSection from '../components/SiteFaqSection.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import PageShareLinks from '../components/PageShareLinks.astro';
 
 const seo = resolvePageSeo('/faq/');
 const breadcrumbs = [
@@ -44,5 +45,17 @@ const faqs = getAllFaqs();
     </div>
   </section>
 
-  <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" titleAs="h2" />
+  <SiteFaqSection
+    items={faqs}
+    variant="full"
+    titleId="faq-page-list"
+    titleAs="h2"
+    questionHeadings
+  />
+
+  <div class="border-t border-border bg-muted/10 py-8">
+    <div class="mx-auto max-w-6xl px-5">
+      <PageShareLinks pageTitle={seo.title} />
+    </div>
+  </div>
 </BaseLayout>

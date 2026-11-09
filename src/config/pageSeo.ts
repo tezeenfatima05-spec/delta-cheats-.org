@@ -35,7 +35,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'HWID spoofer utilities for identifier cleanup and rotation when your PC needs a fresh hardware profile.',
   },
   '/blog/': {
-    title: 'Delta Force guides, setup tips & articles | Cheats',
+    title: 'Delta Force guides, setup & purchase walkthroughs | Cheats',
     description:
       'Delta Force aimbot tuning, ESP config, loot filters, Chams notes, Cloud DMA prep, and purchase walkthroughs at deltacheats.org.',
   },
@@ -47,7 +47,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/blog/delta-force-esp-guide/': {
     title: 'Player ESP – boxes, skeletons & loot | Delta Cheats',
     description:
-      'Balance player ESP, helmet and armor readouts, snaplines, and loot overlays for readable wallhack-style awareness on DELTA FORCE PC.',
+      'Balance player ESP, helmet and armor readouts, snaplines, and loot overlays for readable wallhack-style awareness on DELTA FORCE PC guides.',
   },
   '/blog/delta-force-cloud-dma/': {
     title: 'Cloud DMA – firmware, cabling & OS checks | Delta Cheats',
@@ -60,7 +60,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Delta Force Community Forum: Community forum for aimbot settings, ESP layouts, loot filters, Chams tuning, and setup questions for DELTA FORCE on PC.',
   },
   '/faq/': {
-    title: 'FAQ — DELTA FORCE cheats, setup & checkout |',
+    title: 'Faq – DELTA FORCE cheats, setup & checkout | Delta Cheats',
     description:
       'FAQ: answers on aimbot, player ESP, loot ESP, Chams, Cloud DMA, checkout, configs, and guides for DELTA FORCE at deltacheats.org.',
   },

@@ -69,10 +69,22 @@ function slugify(text: string): string {
 }
 const published = parseBlogDate(post.date);
 const pageSeoTitle = postSeo?.title ?? pageTitle(post.title);
-const productsCtaLabel =
-  post.slug === 'delta-force-cloud-dma' ? 'DELTA FORCE product specs' : 'DELTA FORCE cheat lineup';
-const blogHubCtaLabel =
-  post.slug === 'delta-force-cloud-dma' ? 'All hardware articles' : 'Browse setup guides';
+const articleCtaLabels: Record<string, { products: string; blog: string }> = {
+  'delta-force-cloud-dma': {
+    products: 'DELTA FORCE product specs',
+    blog: 'All hardware articles',
+  },
+  'delta-force-esp-guide': {
+    products: 'Player overlay product page',
+    blog: 'More DELTA FORCE feature guides',
+  },
+};
+const ctaLabels = articleCtaLabels[post.slug] ?? {
+  products: 'DELTA FORCE cheat lineup',
+  blog: 'Browse setup guides',
+};
+const productsCtaLabel = ctaLabels.products;
+const blogHubCtaLabel = ctaLabels.blog;
 ---
 
 <BaseLayout

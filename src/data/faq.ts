@@ -29,10 +29,13 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const product = link('DELTA FORCE product', productPath('delta-force'));
-const productsHub = link('DELTA FORCE products', ROUTES.products);
-const faqPage = link('full FAQ', ROUTES.faq);
-const blog = link('blog guides', ROUTES.blog);
+const productTable = link('DELTA FORCE feature table', productPath('delta-force'));
+const productEspDoc = link('player ESP option list', productPath('delta-force'));
+const productsCatalog = link('DELTA FORCE products hub', ROUTES.products);
+const faqIndex = link('complete FAQ index', ROUTES.faq);
+const blogSetupArticles = link('setup articles on the blog', ROUTES.blog);
+const blogWalkthroughs = link('feature walkthrough articles', ROUTES.blog);
+const espGuideArticle = link('DELTA FORCE ESP walkthrough', '/blog/delta-force-esp-guide/');
 
 export const siteFaqs: SiteFaqItem[] = [
   {
@@ -75,14 +78,14 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqProductsPage',
     q: 'Where is the product listed?',
-    a: `${productsHub} lists ${product} with the full feature table and secure checkout.`,
+    a: `${productsCatalog} lists ${productTable} with the full feature table and secure checkout.`,
   },
   {
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
     q: 'What is DELTA FORCE player ESP / wallhack?',
-    a: `Player ESP shows soldiers through cover with boxes, skeletons, health bars, weapons, and distance—covered on ${product}.`,
+    a: `Player ESP shows soldiers through cover with boxes, skeletons, health bars, weapons, and distance—covered on ${productEspDoc}.`,
     scopes: ['delta-force'],
   },
   {
@@ -135,7 +138,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'all',
     icon: 'faqMore',
     q: 'Where is the full FAQ?',
-    a: `See the ${faqPage} for all answers—or read ${blog} for setup walkthroughs.`,
+    a: `See the ${faqIndex} for all answers—or read ${blogSetupArticles} for setup walkthroughs.`,
   },
 ];
 
@@ -229,7 +232,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault1',
     q: 'Are blog guides official product documentation?',
-    a: `Articles explain workflows and link to ${productsHub}. The product page feature list is authoritative for checkout.`,
+    a: `Articles explain workflows and link to ${productsCatalog}. The product page feature list is authoritative for checkout.`,
   },
   {
     id: 'blog-default-2',
@@ -249,8 +252,8 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       id: 'blog-slug-esp',
       topic: 'esp',
       icon: 'faqBlogSlugEsp',
-      q: 'Where are ESP options documented?',
-      a: `Player visual options are listed on ${product} and in the ESP guide.`,
+      q: 'Where are player overlay options documented?',
+      a: `Player visual options are listed on ${productEspDoc} and in the ${espGuideArticle}.`,
     });
   }
   if (slug.includes('aimbot')) {

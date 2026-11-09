@@ -58,7 +58,14 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
         </h1>
         <p class="section-header__subtitle">{t.blog.subtitle}</p>
       </header>
-      {featured && <BlogCard post={featured} index={0} eager showDate layout="featured" />}
+      {featured && (
+        <>
+          <h2 id="blog-featured-title" class="mt-8 text-2xl font-semibold md:text-3xl">
+            Featured guide
+          </h2>
+          <BlogCard post={featured} index={0} eager showDate layout="featured" titleAs="h3" />
+        </>
+      )}
     </div>
   </section>
 
@@ -114,7 +121,7 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
 
       <div id="blog-grid" class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
         {gridPosts.map((post, index) => (
-          <BlogCard post={post} index={index} showDate />
+          <BlogCard post={post} index={index} showDate titleAs="h3" />
         ))}
       </div>
 

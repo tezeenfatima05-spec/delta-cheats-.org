@@ -34,13 +34,24 @@ const toc = post.body
     id: slugify('text' in block ? block.text : ''),
   }));
 
-const productLinks: { label: string; href: string; icon: IconName }[] = [
+const defaultProductLinks: { label: string; href: string; icon: IconName }[] = [
   { label: 'DELTA FORCE product', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite cheats', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'Skin Changer', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID Spoofer', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
   { label: 'UGC', href: productPath('ugc'), icon: 'sidebarUgc' },
 ];
+
+const productLinks =
+  post.slug === 'delta-force-esp-guide'
+    ? [
+        { label: 'Cheats products hub', href: ROUTES.products, icon: 'sidebarHub' },
+        { label: 'Elite tier lineup', href: ROUTES.productsElite, icon: 'sidebarElite' },
+        { label: 'Unlock-all utility', href: productPath('unlock-all'), icon: 'sidebarSkin' },
+        { label: 'Spoofer utility page', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
+        { label: 'UGC utility page', href: productPath('ugc'), icon: 'sidebarUgc' },
+      ]
+    : defaultProductLinks;
 ---
 
 <aside

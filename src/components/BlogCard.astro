@@ -20,11 +20,20 @@ interface Props {
   showDate?: boolean;
   /** Full-width split hero on blog index — same card UI as grid cards */
   layout?: 'default' | 'featured';
+  /** Use h3 for post title on blog index outline */
+  titleAs?: 'div' | 'h3';
   class?: string;
 }
 
-const { post, index = 0, eager = false, showDate = false, layout = 'default', class: className } =
-  Astro.props;
+const {
+  post,
+  index = 0,
+  eager = false,
+  showDate = false,
+  layout = 'default',
+  titleAs = 'div',
+  class: className,
+} = Astro.props;
 const isFeatured = layout === 'featured';
 const href = blogPostPath(post.slug);
 const timestamp = getBlogPostTimestamp(post.date);
@@ -113,14 +122,27 @@ function articleCtaLabel(slug: string): string {
         isFeatured && 'justify-center border-t border-border p-5 sm:p-6 lg:border-t-0 lg:py-6 lg:pl-8 lg:pr-6',
       ]}
     >
-      <CardTitle class="text-base font-semibold normal-case leading-snug tracking-tight md:text-[1.0625rem]">
-        <a
-          href={href}
-          class="text-foreground decoration-primary/0 underline-offset-4 transition-colors hover:text-primary hover:underline"
-        >
-          {post.title}
-        </a>
-      </CardTitle>
+      {
+        titleAs === 'h3' ? (
+          <h3 class="text-base font-semibold normal-case leading-snug tracking-tight md:text-[1.0625rem]">
+            <a
+              href={href}
+              class="text-foreground decoration-primary/0 underline-offset-4 transition-colors hover:text-primary hover:underline"
+            >
+              {post.title}
+            </a>
+          </h3>
+        ) : (
+          <CardTitle class="text-base font-semibold normal-case leading-snug tracking-tight md:text-[1.0625rem]">
+            <a
+              href={href}
+              class="text-foreground decoration-primary/0 underline-offset-4 transition-colors hover:text-primary hover:underline"
+            >
+              {post.title}
+            </a>
+          </CardTitle>
+        )
+      }
 
       <p
         class:list={[

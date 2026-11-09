@@ -17,6 +17,7 @@ interface Props {
   variant?: 'full' | 'contextual';
   filterTopics?: FaqTopic[];
   titleAs?: 'h1' | 'h2';
+  questionHeadings?: boolean;
 }
 
 const {
@@ -27,6 +28,7 @@ const {
   variant = 'contextual',
   filterTopics: filterTopicsProp,
   titleAs = 'h1',
+  questionHeadings = false,
 } = Astro.props;
 
 const copy = variant === 'full' ? SITE_FAQ_SECTION_COPY : CONTEXTUAL_FAQ_SECTION_COPY;
@@ -46,4 +48,5 @@ const showFilters = filterTopics.length > 1;
   filterTopics={filterTopics}
   class={className}
   titleAs={titleAs}
+  questionHeadings={questionHeadings}
 />

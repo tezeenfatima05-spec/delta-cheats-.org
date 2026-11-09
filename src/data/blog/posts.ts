@@ -42,10 +42,10 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: 'Features',
-    title: 'DELTA FORCE ESP guide: boxes, skeletons, loot & cheats',
+    title: 'DELTA FORCE player ESP guide: boxes, skeletons, loot & cheats',
     slug: 'delta-force-esp-guide',
     image: '/images/blog/delta-force-esp-guide.webp',
-    desc: 'Balance player ESP, loot filters, helmet and armor readouts, and snaplines for readable overlays.',
+    desc: 'Balance player overlays, loot filters, helmet and armor readouts, and snaplines for readable awareness.',
     date: 'Feb 28, 2026',
     readTime: '7 min read',
     body: [
@@ -62,6 +62,11 @@ export const blogPosts: BlogPostFull[] = [
       {
         type: 'p',
         text: 'Use minimum price filters so only valuable items ping. Toggle player corpses, AI corpses, and computer loot markers based on your current game mode.',
+      },
+      { type: 'h2', text: 'Skeleton and box styling' },
+      {
+        type: 'p',
+        text: 'Skeleton lines help in open terrain; corner boxes read better in urban fights. Raise max distance only after you confirm frame time stays stable with your GPU headroom.',
       },
       {
         type: 'img',
