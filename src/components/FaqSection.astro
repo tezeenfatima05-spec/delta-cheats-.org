@@ -22,6 +22,7 @@ interface Props {
   contentAlign?: 'left' | 'center';
   id?: string;
   class?: string;
+  titleAs?: 'h1' | 'h2';
 }
 
 const {
@@ -36,6 +37,7 @@ const {
   contentAlign = 'center',
   id: sectionId,
   class: className,
+  titleAs = 'h1',
 } = Astro.props;
 
 const topicLabels: Record<FaqTopic, string> = {
@@ -66,6 +68,7 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
       desc={subtitle}
       titleId={titleId}
       centered={centered}
+      titleAs={titleAs}
     />
 
     {

@@ -22,6 +22,18 @@ if (urlCount === 0) {
   process.exit(1);
 }
 
+function rewriteSitemapLocs(xml) {
+  return xml.replace(/<loc>([^<]+)<\/loc>/g, (_match, loc) => {
+    try {
+      const parsed = new URL(loc);
+      const pathPart = `${parsed.pathname}${parsed.search}`;
+      return `<loc>${SITE_ORIGIN}${pathPart}</loc>`;
+    } catch {
+      return `<loc>${loc}</loc>`;
+    }
+  });
+}
+
 function formatUrlset(xml) {
   return xml
     .replace(/^<\?xml[^?]*\?>/, '<?xml version="1.0" encoding="UTF-8"?>\n')
@@ -39,7 +51,7 @@ function formatUrlset(xml) {
     .replace(/<\/priority>/g, '</priority>\n');
 }
 
-const formatted = formatUrlset(raw);
+const formatted = formatUrlset(rewriteSitemapLocs(raw));
 fs.writeFileSync(path.join(staticDir, 'sitemap.xml'), formatted, 'utf8');
 
 const indexXml = `<?xml version="1.0" encoding="UTF-8"?>

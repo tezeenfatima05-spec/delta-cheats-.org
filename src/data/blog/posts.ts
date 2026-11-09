@@ -8,7 +8,7 @@ export const blogPosts: BlogPostFull[] = [
   {
     tag: 'Setup',
     featured: true,
-    title: 'DELTA FORCE aimbot setup: FOV, smoothness & cheats',
+    title: 'DELTA FORCE aimbot setup: FOV, smoothness, bone selection & cheats',
     slug: 'delta-force-aimbot-setup',
     image: '/images/blog/delta-force-aimbot-setup.webp',
     desc: 'Configure aimbot FOV, smoothness, stickiness, visible check, and dual keybinds without overshooting.',
@@ -42,7 +42,7 @@ export const blogPosts: BlogPostFull[] = [
   },
   {
     tag: 'Features',
-    title: 'DELTA FORCE ESP guide: player, loot & wallhack',
+    title: 'DELTA FORCE ESP guide: boxes, skeletons, loot & cheats',
     slug: 'delta-force-esp-guide',
     image: '/images/blog/delta-force-esp-guide.webp',
     desc: 'Balance player ESP, loot filters, helmet and armor readouts, and snaplines for readable overlays.',
@@ -51,33 +51,33 @@ export const blogPosts: BlogPostFull[] = [
     body: [
       {
         type: 'p',
-        text: `Player and loot ESP are the core awareness layers in ${productLink}. Start with boxes and distance, then add loot price filters once player visuals feel clean.`,
+        text: `Player and loot overlays are the core awareness layers in ${productLink}. Start with boxes and distance, then add loot price filters once player visuals feel clean.`,
       },
       {
         type: 'img',
         src: '/images/blog/delta-force-esp-guide.webp',
-        alt: 'DELTA FORCE player ESP with boxes and name tags',
+        alt: 'DELTA FORCE player boxes and name tags',
       },
-      { type: 'h2', text: 'Loot ESP and corpses' },
+      { type: 'h2', text: 'Loot overlays and corpses' },
       {
         type: 'p',
-        text: 'Use minimum price filters so only valuable items ping. Toggle player corpses, AI corpses, and computer ESP based on your current game mode.',
+        text: 'Use minimum price filters so only valuable items ping. Toggle player corpses, AI corpses, and computer loot markers based on your current game mode.',
       },
       {
         type: 'img',
         src: '/images/gameplay/screenshot-2.webp',
-        alt: 'DELTA FORCE visuals menu for ESP customization',
+        alt: 'DELTA FORCE visuals menu for overlay customization',
       },
       {
         type: 'img',
         src: '/images/blog/delta-force-hero-powerful-alt.webp',
-        alt: 'DELTA FORCE ESP and wallhack gameplay screenshot',
+        alt: 'DELTA FORCE wallhack gameplay screenshot',
       },
     ],
   },
   {
     tag: 'Hardware',
-    title: 'Cloud DMA requirements for DELTA FORCE cheats',
+    title: 'Cloud DMA for DELTA FORCE: firmware, cabling & OS checks',
     slug: 'delta-force-cloud-dma',
     image: '/images/blog/delta-force-cloud-dma.webp',
     desc: 'What Cloud DMA compatibility means and what to verify on your PC before checkout.',
@@ -87,6 +87,10 @@ export const blogPosts: BlogPostFull[] = [
       {
         type: 'p',
         text: 'Cloud DMA describes the external hardware workflow many DELTA FORCE builds expect. Verify firmware, cabling, and OS build on the product page before purchase.',
+      },
+      {
+        type: 'p',
+        text: 'Run a quick bench check: reseat the DMA link, confirm the bridge sees the target machine, and note your Windows build number. If any step fails, fix hardware first—software configs cannot compensate for a bad cable or outdated firmware.',
       },
       {
         type: 'img',

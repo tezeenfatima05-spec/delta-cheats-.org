@@ -8,9 +8,9 @@ export const en: Translations = {
   site: {
     name: 'Delta Cheats',
     domain: 'deltacheats.org',
-    title: 'DELTA FORCE Cheats — Aimbot, ESP & Wallhack | Delta Cheats',
+    title: 'Delta Force Cheats – Aimbot, ESP & Wallhack | Delta Cheats',
     description:
-      'Explore DELTA FORCE cheats for PC featuring customizable aimbot, player ESP, wallhack, skeleton ESP, health bars, weapon information, and Cloud DMA support at Delta Cheats.',
+      'Explore DELTA FORCE cheats for PC featuring customizable aimbot, player ESP, skeleton ESP, loot tracking, Chams, third-person view, and Cloud DMA support.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [
@@ -483,7 +483,7 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About Delta Cheats',
+      title: 'About Delta Cheats — Guides',
       description: 'Delta Cheats provides DELTA FORCE feature guides, setup tips, and product information at deltacheats.org.',
       sections: [
         {
@@ -497,6 +497,7 @@ export const en: Translations = {
           heading: 'What we publish',
           paragraphs: [
             'Our site covers the DELTA FORCE cheat suite, aimbot and ESP setup articles, and Cloud DMA compatibility notes. Content updates when feature lists or requirements change.',
+            'Guides on the blog walk through configs screen by screen so you can match settings to your play style without guessing.',
             'Check deltacheats.org status notes before every session.',
           ],
         },
@@ -509,7 +510,7 @@ export const en: Translations = {
       ],
     },
     privacy: {
-      title: 'Privacy Policy',
+      title: 'Privacy — cookies, analytics & contact data',
       description: 'How Delta Cheats handles analytics, cookies, and contact data when you use deltacheats.org.',
       sections: [
         {
@@ -528,6 +529,12 @@ export const en: Translations = {
           heading: 'Cookies',
           paragraphs: [
             'We use minimal cookies required for analytics. You can block cookies in your browser; core site content remains accessible without them.',
+          ],
+        },
+        {
+          heading: 'Your choices',
+          paragraphs: [
+            'You may request deletion of support correspondence tied to your email. Analytics data in third-party tools is subject to those providers’ retention settings.',
           ],
         },
         {
