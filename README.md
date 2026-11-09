@@ -15,4 +15,12 @@ npm run dev
 npm run build
 ```
 
+## Deploy (Cloudflare Workers)
+
+```bash
+npm run workers:deploy
+```
+
+In Workers Builds, set **Deploy command** to `npm run workers:deploy` (see `docs/cloudflare-workers-deploy.md`).
+
 Primary config: `src/config/site.ts`, checkout: `src/config/checkout-redirects.mjs`, SEO routes: `src/config/pageSeo.ts`.

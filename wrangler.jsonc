@@ -1,8 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  // Workers Builds deploy command: `npm run workers:deploy` (NOT bare `npx wrangler deploy`).
+  // Workers Builds (recommended deploy command): `npm run workers:deploy`
+  // If the dashboard uses `npx wrangler deploy`, this build step must run first:
   "name": "delta-cheats-org",
   "compatibility_date": "2025-03-01",
+  "build": {
+    "command": "PUBLIC_SITE_ORIGIN=https://deltacheats.org npm run build"
+  },
   "assets": {
     "directory": "./dist/client"
   }
