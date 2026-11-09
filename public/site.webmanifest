@@ -1,0 +1,21 @@
+{
+  "name": "Delta Cheats",
+  "short_name": "Delta Cheats",
+  "description": "DELTA FORCE cheats with aimbot, player ESP, loot ESP, Chams, and Cloud DMA tools for PC.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0A14",
+  "theme_color": "#0D0A14",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
