@@ -8,7 +8,7 @@ export const en: Translations = {
   site: {
     name: 'Delta Cheats',
     domain: 'deltacheats.org',
-    title: 'Delta Force Cheats – Aimbot, ESP & Wallhack | Delta Cheats',
+    title: 'Delta Force Cheats – Aimbot, ESP & Wallhack | Cheats',
     description:
       'Explore DELTA FORCE cheats for PC featuring customizable aimbot, player ESP, skeleton ESP, loot tracking, Chams, third-person view, and Cloud DMA support.',
     discord: PRIMARY_CHECKOUT_PATH,
@@ -23,8 +23,8 @@ export const en: Translations = {
   hero: {
     status: 'DELTA FORCE — build online',
     eyebrow: 'PC tactical suite',
-    titleLine1: 'DELTA FORCE',
-    titleLine2: 'Cheats for PC — Aimbot, Player ESP & Wallhack',
+    titleLine1: 'Delta Cheats — DELTA FORCE',
+    titleLine2: 'PC aimbot, player ESP & wallhack',
     subtitle:
       'Customizable aimbot, player ESP, loot tracking, Chams, and third-person tools for DELTA FORCE on PC—with Cloud DMA compatibility and a full config system.',
     ctaPrimary: 'View products',

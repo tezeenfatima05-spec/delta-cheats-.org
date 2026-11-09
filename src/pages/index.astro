@@ -9,6 +9,7 @@ import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import { faqPageSchema, organizationSchema, websiteSchema } from '../utils/schema';
 import { getLandingFaqs } from '../data/faq';
+import PageShareLinks from '../components/PageShareLinks.astro';
 const seo = resolvePageSeo('/');
 const homeFaqs = getLandingFaqs();
 const heroLcpImage = '/images/gameplay/hero-poster.webp';
@@ -33,4 +34,9 @@ const heroLcpImage = '/images/gameplay/hero-poster.webp';
   <ProductsSection />
   <WhySetupSection />
   <ContentSections />
+  <div class="border-t border-border bg-muted/10 py-8">
+    <div class="mx-auto max-w-6xl px-5">
+      <PageShareLinks pageTitle={seo.title} />
+    </div>
+  </div>
 </BaseLayout>

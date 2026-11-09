@@ -10,7 +10,7 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Delta Force Cheats – Aimbot, ESP & Wallhack | Delta Cheats',
+    title: 'Delta Force Cheats – Aimbot, ESP & Wallhack | Cheats',
     description:
       'Explore DELTA FORCE cheats for PC featuring customizable aimbot, player ESP, skeleton ESP, loot tracking, Chams, third-person view, and Cloud DMA support.',
   },
@@ -52,7 +52,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/blog/delta-force-cloud-dma/': {
     title: 'Cloud DMA – firmware, cabling & OS checks | Delta Cheats',
     description:
-      'What Cloud DMA compatibility means on PC and what to verify before checkout for DELTA FORCE cheats—firmware, cabling, and OS checks.',
+      'What Cloud DMA compatibility means on PC and what to verify before checkout for DELTA FORCE. Hardware notes on firmware, cabling, and OS checks.',
   },
   '/forum/': {
     title: 'Delta Force Community Forum — aimbot & ESP | Cheats',

@@ -24,6 +24,7 @@ import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import BlogPostCta from '../../components/BlogPostCta.astro';
 import { normalizeInternalPath, ROUTES } from '../../utils/path';
+import PageShareLinks from '../../components/PageShareLinks.astro';
 
 export function getStaticPaths() {
   return getAllBlogSlugs().map((slug) => ({ params: { slug } }));
@@ -67,6 +68,11 @@ function slugify(text: string): string {
     .replace(/^-|-$/g, '');
 }
 const published = parseBlogDate(post.date);
+const pageSeoTitle = postSeo?.title ?? pageTitle(post.title);
+const productsCtaLabel =
+  post.slug === 'delta-force-cloud-dma' ? 'DELTA FORCE product specs' : 'DELTA FORCE cheat lineup';
+const blogHubCtaLabel =
+  post.slug === 'delta-force-cloud-dma' ? 'All hardware articles' : 'Browse setup guides';
 ---
 
 <BaseLayout
@@ -194,16 +200,18 @@ const published = parseBlogDate(post.date);
             })}
           </Prose>
 
+          <PageShareLinks pageTitle={pageSeoTitle} pathname={postPath} class="mt-8" />
+
           <nav class="blog-article__actions" aria-label="Continue reading">
             <Button as="a" href={checkoutPath('deltaForce')} variant="primary" aria-label={t.ui.checkoutAria}>
               Buy DELTA FORCE Cheats
               <Icon name="arrowRight" size={17} />
             </Button>
             <Button as="a" href={ROUTES.products} variant="outline">
-              View products
+              {productsCtaLabel}
             </Button>
             <Button as="a" href={ROUTES.blog} variant="outline">
-              More articles
+              {blogHubCtaLabel}
               <Icon name="arrowRight" size={17} />
             </Button>
           </nav>

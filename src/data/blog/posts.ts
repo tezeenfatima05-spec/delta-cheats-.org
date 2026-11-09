@@ -92,6 +92,11 @@ export const blogPosts: BlogPostFull[] = [
         type: 'p',
         text: 'Run a quick bench check: reseat the DMA link, confirm the bridge sees the target machine, and note your Windows build number. If any step fails, fix hardware first—software configs cannot compensate for a bad cable or outdated firmware.',
       },
+      { type: 'h2', text: 'Firmware and cabling checks' },
+      {
+        type: 'p',
+        text: 'Match the vendor firmware revision to the build notes on the product page, then trace power and data cables without sharp bends. Loose seating is the usual cause of dropped frames in the overlay bridge.',
+      },
       {
         type: 'img',
         src: '/images/blog/delta-force-cloud-dma.webp',
