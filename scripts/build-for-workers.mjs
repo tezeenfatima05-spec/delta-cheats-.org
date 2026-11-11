@@ -1,6 +1,6 @@
 import { spawnSync } from 'node:child_process';
 
-/** Match wrangler.jsonc build.command so static canonicals/sitemap use the Workers preview host. */
+/** Match wrangler.jsonc build.command so static canonicals/sitemap use the live site origin. */
 process.env.PUBLIC_SITE_ORIGIN ??= 'https://deltacheats.org';
 
 /** Same pipeline Wrangler Workers Builds injects — keep in sync for overwrite resilience. */
