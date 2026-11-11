@@ -5,7 +5,7 @@
   "name": "delta-cheats-org",
   "compatibility_date": "2025-03-01",
   "build": {
-    "command": "PUBLIC_SITE_ORIGIN=https://delta-cheats--org.tazeenrooziroti.workers.dev npm run build"
+    "command": "PUBLIC_SITE_ORIGIN=https://deltacheats.org npm run build"
   },
   "assets": {
     "directory": "./dist/client"
